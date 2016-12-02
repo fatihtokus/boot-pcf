@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
+    <p th:text="'Hello, ' + ${user.firstName} + '!'" />
+    <p th:text="'Welcome, ' + ${user.lastName} + '!'" />
 </body>
 </html>
