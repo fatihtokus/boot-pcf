@@ -11,6 +11,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
 	private String firstName;
 	private String lastName;
 
@@ -48,7 +49,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return String.format("User[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
-
+	
 }
