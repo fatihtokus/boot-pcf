@@ -1,21 +1,19 @@
 package hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class GreetingController {
 	@Autowired
 	UserRepository repository;
 	
     @RequestMapping("/greeting")
-    public String greeting(@RequestParam(value="id", required=false, defaultValue="1") Long id, Model model) {
+    public User greeting(@RequestParam(value="id", required=false, defaultValue="1") Long id) {
     	User user = repository.findOne(id);
-        model.addAttribute("user", user);
-        return "greeting";
+        return user;
     }
 
 }
