@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 public class DataSourceConfig {
-	@Configuration
-	@Profile("cloud")
+	//@Configuration
+	//@Profile("cloud")
 	static class CloudConfiguration {
 		@Bean
 		public DataSource dataSource() {
@@ -23,8 +23,8 @@ public class DataSourceConfig {
 		}
 	}
 
-	@Configuration
-	@Profile("default")
+	//@Configuration
+	//@Profile("default")
 	static class LocalConfiguration {
 		@Bean
 		public DataSource dataSource() {
